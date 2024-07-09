@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Captcha Generator</title>
+    <title>Remove Duplicate</title>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,18 +14,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--Nav Bar ICON-->
     <div class="whole_div">
       <div class="nav_menu_toggle hidden" onclick="showNavbar()">
-        <img src="image/menubars.png" height="30px" width="30px" />
+        <img src="./assests/images/menubars.png" height="30px" width="30px" />
       </div>
       <p class="sidenavclose" onclick="closenavbar()">
         <img
-          src="image/xmark-circle.png"
+          src="./assests/images/xmark-circle.png"
           height="30px"
           width="30px"
         />
       </p>
+      <!--  <nav class="navbar">
+        <a href="index.html">Captcha</a>
+        <a href="image_pop.html">Image Gallery</a>
+        <a href="quiz.html">Interactive Quiz</a>
+        <a href="remove_duplicate.html">Remove Duplicate</a>
+        <a href="mock_up.html">Mock_up</a>
+      </nav> -->
       <!-- sidenav -->
       <nav class="side_navbar navbar">
         <a href="index.html">Captcha</a>
@@ -35,23 +41,22 @@
         <a href="mock.html">Mock_up</a>
       </nav>
       <div class="container">
-        <div class="captchadiv">
-          <h2>Verify Captcha</h2>
+        <div class="removeduplicatediv">
+          <h4>Remove Duplicate from Array</h4>
           <br />
-          <div id="currentcaptcha"></div>
           <input
             type="text"
-            placeholder="Enter the content showed above"
-            id="userInput"
-          />
-          <button id="verification_button" onclick=" verifyCaptcha()">
-            Verify
-          </button>
-          <div id="message" class="message"></div>
+            id="arrayfield"
+            class="arrayfield"
+            placeholder="Enter numbers separated by comma"
+          /><br /><br />
+          <button class="remove" onclick="removeduplicate()">Remove Duplicate</button
+          ><br /><br />
+          <div class="output" id="output"></div>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
     <script src="pop.js"></script>
+    <script src="remove.js"></script>
   </body>
 </html>
